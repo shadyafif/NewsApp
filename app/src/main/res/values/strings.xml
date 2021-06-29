@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="read_me">Read Me</string>
+    <string name="business">Business</string>
+    <string name="headlines">Top Headlines</string>
+
+    <string name="checkChecked">Article Successfully added to FavoriteList</string>
+    <string name="checkNotChecked">Article Successfully Removed From FavoriteList</string>
+    <string name="no_saved_articles">NO SAVED ARTICLES</string>
+</resources>

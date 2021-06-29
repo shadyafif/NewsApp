@@ -24,15 +24,15 @@ This android app created with google api news, Included with four categories: to
 - Mvvvm
  
  ### Libraries 
--Retrofit 2.9.0 (https://square.github.io/retrofit/)
--Gson 2.8.6 (https://github.com/google/gson)
--Room 2.3.0 (https://developer.android.com/training/data-storage/room)
--Coroutine 1.4.3 (https://developer.android.com/kotlin/coroutines)
--Paging 3.0.0 (https://developer.android.com/topic/libraries/architecture/paging/v3-overview)
--Picasso 2.71828 (https://square.github.io/picasso/)
--ViewPager 1.0.0 (https://developer.android.com/jetpack/androidx/releases/viewpager2)
--Material 1.3.0 (https://material.io/design)
--ViewModel, LiveData, Viewbinding 2.3.1 (https://developer.android.com/jetpack/androidx/releases/lifecycle)
+- Retrofit 2.9.0 (https://square.github.io/retrofit/)
+- Gson 2.8.6 (https://github.com/google/gson)
+- Room 2.3.0 (https://developer.android.com/training/data-storage/room)
+- Coroutine 1.4.3 (https://developer.android.com/kotlin/coroutines)
+- Paging 3.0.0 (https://developer.android.com/topic/libraries/architecture/paging/v3-overview)
+- Picasso 2.71828 (https://square.github.io/picasso/)
+- ViewPager 1.0.0 (https://developer.android.com/jetpack/androidx/releases/viewpager2)
+- Material 1.3.0 (https://material.io/design)
+- ViewModel, LiveData, Viewbinding 2.3.1 (https://developer.android.com/jetpack/androidx/releases/lifecycle)
 
 ## Setup
 To run this project, install it by download or clone. Then you need to register a new account in news api website (https://newsapi.org/s/google-news-api) to aquire api key for your app.

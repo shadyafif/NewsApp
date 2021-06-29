@@ -110,4 +110,6 @@ class NewsDetailsFragment : Fragment(), View.OnClickListener {
             startActivity(Intent.createChooser(share, "Share link!"))
         }
     }
+
+
 }

@@ -15,7 +15,7 @@ This android app created with google api news, Included with four categories: to
 <img src="/images/ShareScreen.jpg" width="300"/> 
 <img src="/images/EmptyFavoriteList.jpg" width="300"/> 
 <img src="/images/FavoriteScreen.jpg" width="300"/> 
-##Technolgies
+## Technolgies
 ### Languages :
 - kotlin 
 - Xml

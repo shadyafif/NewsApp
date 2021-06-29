@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
-import com.example.newsapp.Repository.HeadLineRepo
+import com.example.newsapp.Data.Repository.HeadLineRepo
 
 class HeadLineViewModel() : ViewModel() {
     val articles = Pager(PagingConfig(pageSize = 20)) {

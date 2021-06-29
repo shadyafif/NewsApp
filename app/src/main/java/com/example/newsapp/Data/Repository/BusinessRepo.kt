@@ -1,4 +1,4 @@
-package com.example.newsapp.Repository
+package com.example.newsapp.Data.Repository
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState

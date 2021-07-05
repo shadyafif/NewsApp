@@ -32,6 +32,7 @@ This android app created with google api news, Included with four categories: to
 - Picasso 2.71828 (https://square.github.io/picasso/)
 - ViewPager 1.0.0 (https://developer.android.com/jetpack/androidx/releases/viewpager2)
 - Material 1.3.0 (https://material.io/design)
+- Hilt 2.32-alpha (https://developer.android.com/training/dependency-injection/hilt-android)
 - ViewModel, LiveData, Viewbinding 2.3.1 (https://developer.android.com/jetpack/androidx/releases/lifecycle)
 
 ## Setup

@@ -9,7 +9,9 @@ import com.example.newsapp.R
 import com.example.newsapp.Ui.Fragments.FavoriteFragment
 import com.example.newsapp.Ui.Fragments.HomeFragment
 import com.example.newsapp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding

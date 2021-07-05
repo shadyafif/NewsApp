@@ -6,11 +6,16 @@ import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.cachedIn
+import com.example.newsapp.Data.Repository.BusinessRepo
 import com.example.newsapp.Data.Repository.HeadLineRepo
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class HeadLineViewModel() : ViewModel() {
+@HiltViewModel
+
+class HeadLineViewModel @Inject constructor(private val repo: HeadLineRepo) : ViewModel() {
     val articles = Pager(PagingConfig(pageSize = 20)) {
-        HeadLineRepo()
+        repo
     }.flow.cachedIn(viewModelScope)
 
 

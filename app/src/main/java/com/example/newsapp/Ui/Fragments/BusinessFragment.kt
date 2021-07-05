@@ -11,16 +11,18 @@ import androidx.paging.PagingData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapp.Ui.Adapter.MainAdapter
 import com.example.newsapp.Data.Model.Article
+import com.example.newsapp.Data.Repository.BusinessRepo
 import com.example.newsapp.R
 import com.example.newsapp.Ui.Viewmodels.BusinessViewmodel
 import com.example.newsapp.Utlies.Helper.Replace
 import com.example.newsapp.databinding.FragmentBusinessBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-
+@AndroidEntryPoint
 class BusinessFragment : Fragment() , MainAdapter.OnNewsItemClick{
     var BusinessAdapter: MainAdapter? = null
     private var _binding: FragmentBusinessBinding? = null
@@ -35,7 +37,6 @@ class BusinessFragment : Fragment() , MainAdapter.OnNewsItemClick{
         _binding = FragmentBusinessBinding.inflate(inflater, container, false)
         initViews()
         viewModel = ViewModelProvider(this).get(BusinessViewmodel::class.java)
-        viewModel = BusinessViewmodel()
         GlobalScope.launch(Dispatchers.IO) {
             viewModel.articles.collectLatest { pagedData: PagingData<Article> ->
                 BusinessAdapter!!.submitData(pagedData)

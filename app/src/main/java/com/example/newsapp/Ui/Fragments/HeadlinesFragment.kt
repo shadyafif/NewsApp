@@ -14,12 +14,13 @@ import com.example.newsapp.R
 import com.example.newsapp.Ui.Viewmodels.HeadLineViewModel
 import com.example.newsapp.Utlies.Helper.Replace
 import com.example.newsapp.databinding.FragmentHeadlinesBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-
+@AndroidEntryPoint
 class HeadlinesFragment : Fragment(), MainAdapter.OnNewsItemClick {
     private var _binding: FragmentHeadlinesBinding? = null
     private val binding get() = _binding!!
@@ -33,7 +34,6 @@ class HeadlinesFragment : Fragment(), MainAdapter.OnNewsItemClick {
         _binding = FragmentHeadlinesBinding.inflate(inflater, container, false)
         initViews()
         viewModel = ViewModelProvider(this).get(HeadLineViewModel::class.java)
-        viewModel = HeadLineViewModel()
         GlobalScope.launch(Dispatchers.IO) {
             viewModel!!.articles.collectLatest { pagedData: PagingData<Article> ->
                 headLineAdapter!!.submitData(pagedData)
@@ -44,7 +44,7 @@ class HeadlinesFragment : Fragment(), MainAdapter.OnNewsItemClick {
     }
 
     fun initViews() {
-        headLineAdapter = MainAdapter(this,activity!!)
+        headLineAdapter = MainAdapter(this,requireActivity())
         binding.recHeadLine.layoutManager = LinearLayoutManager(activity)
         binding.recHeadLine.adapter = headLineAdapter
 
@@ -78,7 +78,7 @@ class HeadlinesFragment : Fragment(), MainAdapter.OnNewsItemClick {
         Replace(
             newsDetailsfragment,
             R.id.frame_layout,
-            activity!!.supportFragmentManager.beginTransaction()
+            requireActivity().supportFragmentManager.beginTransaction()
         )
     }
 
